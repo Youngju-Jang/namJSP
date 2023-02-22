@@ -3,7 +3,7 @@ package com.fastcampus.ch2;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class Main {
+public class PrivateMethodCall {
      public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
 //          Hello hello = new Hello();
 //          hello.main(); // private 외부 호출불가
