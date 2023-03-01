@@ -7,21 +7,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Calendar;
 
 // 년월일
 @Controller
-public class YoilTellerMVC {
+public class YoilTellerMVC2 {
 	@ExceptionHandler(Exception.class)
      public String catcher(Exception ex) {
     	 ex.printStackTrace();
     	 return "yoilError";
      }
-     @RequestMapping ("/getYoilMVC") // http://localhost/ch2/getYoilMVC?year=2021&month=10&day=1
+     @RequestMapping ("/getYoilMVC2") // http://localhost/ch2/getYoilMVC?year=2021&month=10&day=1
      public String main(@RequestParam(required=true) int year, 
     		 @RequestParam(required=true) int month, 
     		 @RequestParam(required=true) int day, Model model) throws IOException {
@@ -39,7 +36,7 @@ public class YoilTellerMVC {
           return "yoil"; // /WEB-INF/views/yoil.jsp
      }
      
-     @RequestMapping ("/getYoilMVCModel") // http://localhost/ch2/getYoilMVC?year=2021&month=10&day=1
+     @RequestMapping ("/getYoilMVC2MAV") // http://localhost/ch2/getYoilMVC?year=2021&month=10&day=1
      public ModelAndView main(int year, int month, int day) throws IOException {
           // 이건 잘 안씀
           ModelAndView mv = new ModelAndView();
