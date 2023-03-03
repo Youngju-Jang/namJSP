@@ -1,13 +1,13 @@
 package com.fastcampus.ch2;
 
-import java.util.Calendar;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.Calendar;
 
 // 년월일
 @Controller
@@ -16,10 +16,10 @@ public class YoilTellerMVC6 {
      public String catcher(Exception ex, BindingResult result) {
 		System.out.println("result = " + result);
 		FieldError error = result.getFieldError();
-		
+          System.out.println();
 		System.out.println("error="+result.getFieldError());
 		System.out.println("msg="+error.getDefaultMessage());
-    	 ex.printStackTrace();
+          ex.printStackTrace();
     	 return "yoilError";
      }
 	
